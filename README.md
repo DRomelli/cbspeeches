@@ -5,13 +5,13 @@ To the best of our knowledge, this dataset represents the most comprehensive col
 
 The dataset is freely available for academic research and personal non-commercial use.
 When you use the index and its associated data, please acknowledge the following paper as the data source:
-- Campiglio, E., Deyris, J., Romelli, D., Scalisi, G., 2024. [Warning words in a warming world: Central bank communication and climate change](). 
+- Campiglio, E., Deyris, J., Romelli, D., Scalisi, G., 2024. [Warning words in a warming world: Central bank communication and climate change]().
 
 
 The repository consists of the following components:
 
-- [Dataset](https://github.com/centralbankspeeches/dataset) is a folder that contains the full data with 
+- [Dataset](https://github.com/DRomelli/cbspeeches/tree/main/dataset) is a folder that contains the full data with 
   
-- [App](https://github.com/centralbankspeeches/app) is a responsive shinyapp that allows for user exploration of the speeches using keyword(s). 
+- [App](https://github.com/centralbankspeeches/app) is ShinyApp page that allows users to explore the context of all speeches using keyword(s). 
 
 See also the website [https://github.com/centralbankspeeches/dataset](https://github.com/centralbankspeeches/dataset), where these data can be easily downloaded. 
