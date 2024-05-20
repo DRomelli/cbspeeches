@@ -1,0 +1,74 @@
+body {
+  padding: 0 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-collapse .collapse {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-right: 0;
+}
+
+.navbar .container-fluid .collapse .navbar-nav {
+  margin: auto;
+  margin-right: 0;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link.nav-link.active:hover {
+  color: #0056ff;
+}
+
+.navbar-toggler:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.nav-link:hover {
+  color: #0056ff;
+}
+
+.nav-link.active:hover {
+  color: #0056ff;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: block !important;
+    margin-right: 0;
+  }
+}
+
+.contact-container {
+    display: flex;            /* Activates Flexbox */
+    justify-content: space-around; /* Distributes space around items */
+    align-items: flex-start;  /* Aligns items at the start of the flex container */
+    flex-wrap: wrap;          /* Allows items to wrap onto the next line as needed */
+}
+
+.contact-box {
+    width: 205px;             /* Set a fixed width for each box */
+    margin: 10px;             /* Optional: adds space between boxes */
+}
+
+
+.contact-box svg {
+    width: 24px; /* Set the width of the SVG */
+    height: 24px; /* Set the height of the SVG */
+    margin-right: 5px; /* Add some space between the SVG and the email address */
+}
+
+.contact-box a {
+    font-size: 14px; /* Set the font size of the email address */
+    vertical-align: middle; /* Align the email address vertically */
+}
+
+/*# sourceMappingURL=main.css.map */
