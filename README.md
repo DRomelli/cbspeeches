@@ -14,4 +14,4 @@ The repository consists of the following components:
   
 - [App](https://github.com/centralbankspeeches/app) is ShinyApp page that allows users to explore the context of all speeches using keyword(s). 
 
-See also the website [https://github.com/centralbankspeeches/dataset](https://github.com/centralbankspeeches/dataset), where these data can be easily downloaded. 
+See also the website [https://github.com/centralbankspeeches/dataset](https://dromelli.github.io/cbspeeches/), where these data can be easily downloaded. 
