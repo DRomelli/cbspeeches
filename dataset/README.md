@@ -12,6 +12,6 @@ The repository consists of the following components:
 
 - [Dataset](https://github.com/DRomelli/cbspeeches/tree/main/dataset) is a folder that contains the full data with 
   
-- [App](https://github.com/centralbankspeeches/app) is ShinyApp page that allows users to explore the context of all speeches using keyword(s). 
+- [App](https://centralbankspeeches.shinyapps.io/explorer/) is ShinyApp page that allows users to explore the context of all speeches using keyword(s). 
 
 See also the website [https://github.com/centralbankspeeches/dataset](https://github.com/centralbankspeeches/dataset), where these data can be easily downloaded. 
