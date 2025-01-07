@@ -63,11 +63,11 @@
         </div>
       </div>
       
-<!--- Data & Doc section --->
+<!-- Data & Doc Section -->
 <div class="row align-items-md-stretch">
-    <!--- Data Block --->
-    <div class="col-md-6" style="margin-bottom: 1.5em; text-align: center;">
-        <div class="h-100 text-white p-5 rounded-3" style="background-color: #0569b9; text-align: center;">
+    <!-- Data Block -->
+    <div class="col-md-6" style="text-align: center;">
+        <div class="h-100 text-white p-5 rounded-3" style="background-color: #0569b9;">
             <h2>Data</h2>
             <p>Download the latest version of the dataset.</p>
 
@@ -84,63 +84,41 @@
 
                 <!-- CSV Button -->
                 <a href="https://www.dropbox.com/scl/fi/n2tsmswnk4ymm3zz0wteg/CBS_dataset_v1.0.csv?rlkey=sdxk6b9xpid0xe7w7s4nm6s87&dl=0" target="_blank">
-                    <button class="btn btn-warning" type="button" style="margin-right: 10px; padding: 6px 30px;">CSV</button>
+                    <button class="btn btn-warning" type="button" style="padding: 6px 30px;">CSV</button>
                 </a>
             </div>
 
-            <!-- Inline instructions link -->
+            <!-- Instructions Toggle Link -->
             <p style="margin-top: 20px; cursor: pointer; font-size: 1.1em;" onclick="toggleInstructions()">
-                <span id="chevronSymbol" style="font-size: 1.2em;">&#x25B6;</span> View instructions to open the files
+                <span id="chevronSymbol" style="font-size: 1.2em;">&#x25B6;</span> Instructions to open the files
             </p>
 
-            <!-- Instructions content (hidden by default) -->
-            <div id="instructionsDropdown" style="display: none; margin-top: 10px; padding: 0; color: white; font-size: 1em;">
-                <p>To ensure that data is displayed correctly in Microsoft Excel, open a blank spreadsheet and import the data by opening the "Data" tab in the ribbon menu and selecting "From Text/CSV". From here, the text file may be selected and loaded in the spreadsheet.</p>
+            <!-- Instructions Content -->
+            <div id="instructionsDropdown" style="display: none; color: white;">
+                <p style="margin-top: 10px;">To ensure that data is displayed correctly in Microsoft Excel, open a blank spreadsheet and import the data by opening the "Data" tab in the ribbon menu and selecting "From Text/CSV". From here, the text file may be selected and loaded in the spreadsheet.</p>
             </div>
         </div>
     </div>
-</div>
 
-<!-- JavaScript for toggling instructions -->
-<script>
-    function toggleInstructions() {
-        var instructions = document.getElementById("instructionsDropdown");
-        var chevronSymbol = document.getElementById("chevronSymbol");
-
-        if (instructions.style.display === "none") {
-            instructions.style.display = "block";
-            chevronSymbol.innerHTML = "&#x25BC;"; // Downward chevron
-        } else {
-            instructions.style.display = "none";
-            chevronSymbol.innerHTML = "&#x25B6;"; // Rightward chevron
-        }
-    }
-</script>
-
-
-
-    <!--- Codebook Block ---> 
+    <!-- Codebook Block -->
     <div class="col-md-6">
         <div class="h-100 p-5 text-black rounded-3" style="background-color: #eeeeef; text-align: center;">
             <h2>Codebook</h2>
             <p>Read the codebook below for information on the variables included in the dataset.</p>
 
-            <div style="text-align: center;">
-                <!-- Codebook Button -->
-                <a href="https://cbspeeches.com/CBSpeeches_Codebook.pdf" target="_blank">
-                    <button class="btn btn-outline-dark" type="button">Codebook</button>
-                </a>
-            </div>
+            <!-- Codebook Button -->
+            <a href="https://cbspeeches.com/CBSpeeches_Codebook.pdf" target="_blank">
+                <button class="btn btn-outline-dark" type="button">Codebook</button>
+            </a>
         </div>
     </div>
 </div>
-
 
 <!-- How to Cite Section -->
 <div class="mb-4 rounded-3" style="background-color: #eeeeef; margin-top: 2%;">
     <div class="container-fluid py-3">
         <h2 class="col-md-6" style="margin-bottom: 1em;">Citations</h2>
-        <p class="col-md-14 fs-5"> When using this data, please cite: </p>
+        <p class="col-md-14 fs-5">When using this data, please cite:</p>
 
         <div style="padding: 0 50px;">
             <ul class="col-md-14 fs-5" style="list-style-type: disc;">
@@ -164,6 +142,23 @@
         </div>
     </div>
 </div>
+
+<!-- JavaScript for toggling instructions -->
+<script>
+    function toggleInstructions() {
+        var instructions = document.getElementById("instructionsDropdown");
+        var chevronSymbol = document.getElementById("chevronSymbol");
+
+        if (instructions.style.display === "none") {
+            instructions.style.display = "block";
+            chevronSymbol.innerHTML = "&#x25BC;"; // Downward chevron
+        } else {
+            instructions.style.display = "none";
+            chevronSymbol.innerHTML = "&#x25B6;"; // Rightward chevron
+        }
+    }
+</script>
+
 
 <!-- Modal for BibTeX citation -->
 <div id="bibtexModal" class="modal" style="display: none;">
