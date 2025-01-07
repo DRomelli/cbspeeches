@@ -60,84 +60,52 @@
           <p class="col-md-14 fs-5"> The dataset features <b>35,487 unique speeches</b> from 131 central banks, for the period going from the beginning of January 1986 (date of the first online speech by a central bank) to the end of December 2023. Among those speeches, 5,347 were provided in a non-English language and were translated using Microsoft Translation services. </p>
           <p class="col-md-14 fs-5"> The dataset is available free of charge for academic research and personal non-commercial use. It can be downloaded in various formats below, or explored using an interactive app with the link at the top of this page. </p>
           
-          <p class="col-md-14 fs-5"> When you use the index and its associated data, please acknowledge the following paper as the data source:</p>
-          <div style="padding: 0 20px;">
-            <ul class="col-md-14 fs-5" style="list-style-type: disc;">
-                <li>
-                    Campiglio, E., Deyris, J., Romelli, D., Scalisi, G., 2025. 
-                    <strong>
-                        <span style="color:#0569b9;">
-                            <a style="color:#0569b9;" href="" target="_blank" rel="noopener">
-                                <em>Warning words in a warming world: Central bank communication and climate change</em>
-                            </a>.
-                        </span>
-                    </strong> 
-                    <em></em>
-                    <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Open_Access_PLoS.svg" alt="Open Access" style="width: 70px; vertical-align: middle;"> -->
-                </li>
-                <!-- Add more <li> elements here for additional bullet points -->
-            </ul>
-        </div>
-    
         </div>
       </div>
       
-      <!--- Data & Doc section ---> 
-      <div class="row align-items-md-stretch">
-            <!--- Data Block ---> 
-            <div class="col-md-6" style = "margin-bottom: 1.5em;">
-            <div class="h-100 text-white p-5 rounded-3" style="background-color: #0569b9;">
-                <h2>Data</h2>
-                <p>Download the latest version of the dataset.</p>
+<!--- Data & Doc section ---> 
+<div class="row align-items-md-stretch">
+    <!--- Data Block ---> 
+    <div class="col-md-6" style="margin-bottom: 1.5em;text-align: center;">
+        <div class="h-100 text-white p-5 rounded-3" style="background-color: #0569b9; text-align: center;">
+            <h2>Data</h2>
+            <p>Download the latest version of the dataset.</p>
 
-                <div style="display: flex;">
-            <!-- a href="javascript:void(0);" onclick="downloadFile('https://raw.githubusercontent.com/centralbankerspeeches/dataset/CBspeeches.rds', 'CBspeeches.rds')"-->
-                <button class="btn btn-warning" type="button" style="margin-right: 10px; padding: 6px 30px;">R</button>
-            </a>
-            <!-- a href="javascript:void(0);" onclick="downloadFile('https://raw.githubusercontent.com/centralbankerspeeches/dataset/CBspeeches.dta', 'CBspeeches.dta')"-->
-                <button class="btn btn-warning" type="button" style="margin-right: 10px; padding: 6px 30px;">STATA</button>
-            </a>
-            <!-- a href="javascript:void(0);" onclick="downloadFile('https://raw.githubusercontent.com/centralbankerspeeches/dataset/CBspeeches.csv', 'CBspeeches.xlsx')"-->
-                <button class="btn btn-warning" type="button" style="margin-right: 10px; padding: 6px 30px;">CSV</button>
-            </a>
-        </div>
-        
-        <script>
-            function downloadFile(url, filename) {
-                var link = document.createElement('a');
-                link.href = url;
-                link.download = filename;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }
-        </script>
+            <div style="display: flex; justify-content: center;">
+                <!-- R Button -->
+                <a href="https://www.dropbox.com/scl/fi/3mook5toq696r1fx8nzb6/CBSpeeches_v1.0.rds?rlkey=pe07q0jji1hz1nl9alau9abxr&dl=0" target="_blank">
+                    <button class="btn btn-warning" type="button" style="margin-right: 10px; padding: 6px 30px;">R</button>
+                </a>
                 
+                <!-- STATA Button -->
+                <a href="https://www.dropbox.com/scl/fi/la5hpz39yht8mmoz0n98t/CBSpeeches_v1.0.dta?rlkey=jo0u8ktm1ixkwic4jw03re9c6&dl=0" target="_blank">
+                    <button class="btn btn-warning" type="button" style="margin-right: 10px; padding: 6px 30px;">STATA</button>
+                </a>
+                
+                <!-- CSV Button -->
+                <a href="https://www.dropbox.com/scl/fi/n2tsmswnk4ymm3zz0wteg/CBSpeeches_v1.0.csv?rlkey=sdxk6b9xpid0xe7w7s4nm6s87&dl=0" target="_blank">
+                    <button class="btn btn-warning" type="button" style="margin-right: 10px; padding: 6px 30px;">CSV</button>
+                </a>
             </div>
+        </div>
+    </div>
+
+    <!--- Codebook Block ---> 
+    <div class="col-md-6">
+        <div class="h-100 p-5 text-black rounded-3" style="background-color: #eeeeef; text-align: center;">
+            <h2>Codebook</h2>
+            <p>Read the codebook below for information on the variables included in the dataset.</p>
+
+            <div style="text-align: center;">
+                <!-- Codebook Button -->
+                <a href="https://cbspeeches.com/dataset/CBSpeeches_Codebook.pdf" target="_blank">
+                    <button class="btn btn-outline-dark" type="button">Codebook</button>
+                </a>
             </div>
+        </div>
+    </div>
+</div>
 
-            <!--- Codebook Block ---> 
-            <div class="col-md-6">
-            <div class="h-100 p-5 text-black rounded-3" style="background-color: #eeeeef;">
-                <h2>Codebook and Paper</h2>
-                <p> Read the codebook below for information on the variables included in the dataset. You can read the paper below for a detailed description of the construction of this dataset and its content.  </p>
-
-                <div style="text-align: center;">
-
-                    <div style="text-align: center;">
-                        <a href="https://cbidata.org/dataset/CBIData_Romelli_2024_Codebook.pdf">
-                            <button class="btn btn-outline-dark" type="button" style="text-align: center;">Codebook</button>
-                        </a>
-
-                    <!-- a href="/cbspeeches/2025_warning_words_paper.pdf" -->
-                    <button class="btn btn-outline-dark" type="button" style="text-align: center;">Paper</button>
-                    </a>
-                                        
-                </div>
-            </div>
-            </div>
-
-      </div>
 
     <!--- How to Cite Section --->
 <div class="mb-4 rounded-3" style="background-color: #eeeeef; margin-top: 2%;">
@@ -172,7 +140,7 @@
         <!-- Dropdown Content -->
         <div id="dropdownContent" style="display: none; padding: 20px; margin-top: 0; background-color: #eeeeef; border-radius: 5px; white-space: pre-wrap; monospace; line-height: 1">
             
-            @article{campiglio2023warning,
+            @article{campiglio2024warning,
                 title={Warning words in a warming world: Central bank communication and climate change},
                 author={Campiglio, E and Deyris, J and Romelli, D and Scalisi, G},
                 year={2025},
