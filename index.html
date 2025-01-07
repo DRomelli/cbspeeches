@@ -55,10 +55,10 @@
         <div class="container-fluid py-3">
                 
             <h1 class="col-md-10 display-6 fw-bold" style="color: #0569b9;">Dataset of central banker speeches</h1>
-            <p class="col-md-14 fs-5">This website contains the dataset of central banker speeches (<b>CBS dataset</b>>) collected for Campiglio, Deyris, Romelli and Scalisi (<a style="color:#0569b9;" href="https://dromelli.github.io/cbspeeches/" target="_blank" rel="noopener">2025</a>). This dataset has been created by complementing the Central bankers' speeches  dataset compiled by the <a style="color:#0569b9;" href="https://www.bis.org/cbspeeches/index.htm" target="_blank" rel="noopener">Bank of International Settlement</a> (18,045 speeches) with a systematic scraping of central banks' websites (15,435 new speeches) and archive work (2,007 additional speeches). </p>
+            <p class="col-md-14 fs-5">This website contains the dataset of central banker speeches (<b>CBS dataset</b>) collected for Campiglio, Deyris, Romelli and Scalisi (<a style="color:#0569b9;" href="https://dromelli.github.io/cbspeeches/" target="_blank" rel="noopener">2025</a>). This dataset has been created by complementing the Central bankers' speeches  dataset compiled by the <a style="color:#0569b9;" href="https://www.bis.org/cbspeeches/index.htm" target="_blank" rel="noopener">Bank of International Settlement</a> (18,045 speeches) with a systematic scraping of central banks' websites (15,435 new speeches) and archive work (2,007 additional speeches). </p>
 
           <p class="col-md-14 fs-5"> The dataset features <b>35,487 unique speeches from 131 central banks</b>, for the period going <b>from the beginning of January 1986</b> (date of the first online speech by a central bank) <b>to the end of December 2023</b>. Among those speeches, 5,347 were provided in a non-English language and were translated using Microsoft Translation services. </p>
-          <p class="col-md-14 fs-5"> The dataset is available free of charge for academic research and personal non-commercial use. It can be downloaded in various formats below, or explored using an (<a style="color:#0569b9;" href="https://dromelli.github.io/cbspeeches/" target="_blank" rel="noopener">interactive app</a>). </p>
+          <p class="col-md-14 fs-5"> The dataset is available free of charge for academic research and personal non-commercial use. It can be downloaded in various formats below, or explored using an <a style="color:#0569b9;" href="https://dromelli.github.io/cbspeeches/" target="_blank" rel="noopener">interactive app</a>. </p>
           
         </div>
       </div>
@@ -87,8 +87,30 @@
                     <button class="btn btn-warning" type="button" style="margin-right: 10px; padding: 6px 30px;">CSV</button>
                 </a>
             </div>
+
+            <!-- Dropdown Section -->
+            <div style="margin-top: 15px; text-align: center;">
+                <button class="btn btn-light" onclick="toggleInstructions()" style="margin-top: 20px;">Instructions to Open the Files</button>
+                <div id="instructionsDropdown" style="display: none; margin-top: 10px; background-color: white; padding: 10px; border-radius: 5px; color: #333;">
+                    <p style="margin: 0;">To ensure that data is displayed correctly in Microsoft Excel, open a blank spreadsheet and import the data by opening the "Data" tab in the ribbon menu and selecting "From Text/CSV". From here, the text file may be selected and loaded in the spreadsheet.</p>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+
+<!-- JavaScript for Dropdown -->
+<script>
+    function toggleInstructions() {
+        var instructions = document.getElementById("instructionsDropdown");
+        if (instructions.style.display === "none") {
+            instructions.style.display = "block";
+        } else {
+            instructions.style.display = "none";
+        }
+    }
+</script>
+
 
     <!--- Codebook Block ---> 
     <div class="col-md-6">
@@ -234,7 +256,7 @@
         var blob = new Blob([bibtexContent], { type: 'text/plain;charset=utf-8' });
         var link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
-        link.download = 'citation.bib';
+        link.download = 'campiglio2025warning.bib';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
