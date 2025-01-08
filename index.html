@@ -25,9 +25,9 @@
 <body>
 
     <!--- Nav ---> 
-    <nav class="navbar navbar-expand-lg" aria-label="Fifth navbar example" style="padding-bottom: 0; background-color: #0569b9;">
+    <nav class="navbar navbar-expand-lg" aria-label="Fifth navbar example" style="padding-bottom: 0; background-color: white;">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="https://cbspeeches.com" style="color: white;">CB speeches dataset</a>
+            <a class="navbar-brand fw-bold" href="https://cbspeeches.com" style="color: #0569b9;">CBS dataset</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" style="border: 0;">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,10 +35,10 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="https://cbspeeches.com/" style="color: white;">Home</a>
+                        <a class="nav-link active" aria-current="page" href="https://cbspeeches.com/" style="color: #0569b9;">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://centralbankspeeches.shinyapps.io/explorer/" target="_blank" rel="noopener noreferrer" style="color: white;">Interactive App</a>
+                        <a class="nav-link" href="https://centralbankspeeches.shinyapps.io/explorer/" target="_blank" rel="noopener noreferrer" style="color: #0569b9;">Interactive App</a>
                     </li>
                 </ul>
             </div>
@@ -48,7 +48,6 @@
     <!--- Main Section ---> 
     <div class="mb-4 rounded-3" style="margin-top: 1em;">
         <div class="container-fluid py-2">
-            <h1 class="col-md-10 display-6 fw-bold" style="color: #0569b9;">Dataset of central banker speeches</h1>
             <p class="col-md-14 fs-5">This website contains the dataset of central banker speeches (<b>CBS dataset</b>) collected for Campiglio, Deyris, Romelli, and Scalisi (<a style="color:#0569b9;" href="https://dromelli.github.io/cbspeeches/" target="_blank" rel="noopener">2025</a>). This dataset has been created by complementing the central bankers' speeches dataset compiled by the <a style="color:#0569b9;" href="https://www.bis.org/cbspeeches/index.htm" target="_blank" rel="noopener">Bank of International Settlement</a> (18,045 speeches) with a systematic scraping of central banks' websites (15,435 new speeches) and archive work (2,007 additional speeches).</p>
 
             <p class="col-md-14 fs-5">The dataset features <b>35,487 unique speeches from 131 central banks</b>, for the period going <b>from the beginning of January 1986</b> (date of the first online speech by a central bank) <b>to the end of December 2023</b>. Among those speeches, 5,347 were provided in a non-English language and were translated using Microsoft Translation services.</p>
@@ -60,110 +59,48 @@
 <div class="row align-items-md-stretch">
     <!-- Data Block -->
     <div class="col-md-6" style="text-align: center;">
-        <div class="h-100 text-white p-5 rounded-3" style="background-color: #0569b9;">
+        <div class="h-100 text-white p-3 rounded-3" style="background-color: #0569b9;">
             <h2>Data</h2>
-            <p>Download the latest version of the dataset.</p>
+            <p style="margin-bottom: 10px;">Download the latest version of the dataset.</p>
 
-            <div style="display: flex; justify-content: center;">
+            <div style="display: flex; justify-content: center; margin-bottom: 10px;">
                 <!-- R Button -->
                 <a href="https://www.dropbox.com/scl/fi/3mook5toq696r1fx8nzb6/CBS_dataset_v1.0.rds?rlkey=pe07q0jji1hz1nl9alau9abxr&dl=0" target="_blank">
-                    <button class="btn btn-warning" type="button" style="margin-right: 10px; padding: 6px 30px;">R</button>
+                    <button class="btn btn-warning" type="button" style="margin-right: 5px; padding: 4px 20px;">R</button>
                 </a>
 
                 <!-- STATA Button -->
                 <a href="https://www.dropbox.com/scl/fi/la5hpz39yht8mmoz0n98t/CBS_dataset_v1.0.dta?rlkey=jo0u8ktm1ixkwic4jw03re9c6&dl=0" target="_blank">
-                    <button class="btn btn-warning" type="button" style="margin-right: 10px; padding: 6px 30px;">STATA</button>
+                    <button class="btn btn-warning" type="button" style="margin-right: 5px; padding: 4px 20px;">STATA</button>
                 </a>
 
                 <!-- CSV Button -->
                 <a href="https://www.dropbox.com/scl/fi/n2tsmswnk4ymm3zz0wteg/CBS_dataset_v1.0.csv?rlkey=sdxk6b9xpid0xe7w7s4nm6s87&dl=0" target="_blank">
-                    <button class="btn btn-warning" type="button" style="padding: 6px 30px;">CSV</button>
+                    <button class="btn btn-warning" type="button" style="padding: 4px 20px;">CSV</button>
                 </a>
             </div>
 
             <!-- Instructions Toggle Link -->
-            <p style="margin-top: 20px; cursor: pointer; font-size: 1.1em; color: white; background-color: #0569b9; padding: 10px; border-radius: 5px; display: inline-block;" onclick="openInstructionsModal()">
+            <p style="margin-top: 10px; cursor: pointer; font-size: 1.1em; color: white; background-color: #0569b9; padding: 8px; border-radius: 5px; display: inline-block;" onclick="openInstructionsModal()">
                 <span id="chevronSymbol" style="font-size: 1.2em; color: white;">&#x25B6;</span> Instructions to open the files
             </p>
-
-            <!-- Instructions Modal (Pop-Out) -->
-            <div id="instructionsModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); overflow: auto;">
-                <div style="background-color: #0569b9; color: white; padding: 20px; margin: 5% auto; border-radius: 10px; width: 80%; max-width: 600px;">
-                    <span onclick="closeInstructionsModal()" style="float: right; font-size: 24px; font-weight: bold; cursor: pointer;">&times;</span>
-                    <h3 style="text-align: center;">Instructions to open the files</h3>
-                    <div style="margin-top: 20px;">
-                        <!-- R Instructions -->
-                        <strong>R:</strong>
-                        <p style="text-align: left;">Open R or RStudio and load the file as follows:</p>
-                        <pre style="background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9em; font-family: monospace;">library(haven)
-                        data <- read_dta("Your/Path/CBS_dataset_v1.0.rds")</pre>
-
-                        <!-- Divider Line -->
-                        <hr style="border: 1px solid rgba(255, 255, 255, 0.5); margin: 20px 0;">
-
-                        <!-- Stata Instructions -->
-                        <strong>Stata:</strong>
-                        <p style="text-align: left;">Open Stata and load the file as follows:</p>
-                        <pre style="background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9em; font-family: monospace;">use "Your/Path/CBS_dataset_v1.0.dta", clear</pre>
-
-                        <!-- Divider Line -->
-                        <hr style="border: 1px solid rgba(255, 255, 255, 0.5); margin: 20px 0;">
-
-                        <!-- CSV Instructions -->
-                        <strong>CSV:</strong>
-                        <p style="text-align: left;">Follow these steps to import the CSV file into Excel:</p>
-                        <ol style="margin-left: 20px; padding-left: 0;text-align: left;">
-                            <li>Open <strong>Microsoft Excel</strong> and create a <strong>blank spreadsheet</strong>.</li>
-                            <li>Click on the <strong>"Data"</strong> tab in the ribbon menu at the top.</li>
-                            <li>Select <strong>"From Text/CSV"</strong> in the "Get & Transform Data" section.</li>
-                            <li>Browse and select the desired CSV file (e.g., <strong>CBS_dataset_v1.0.csv</strong>).</li>
-                            <li>Click <strong>"Import"</strong> and follow the on-screen prompts:
-                                <ul style="margin-left: 20px;text-align: left;">
-                                    <li>Confirm the <strong>delimiter</strong> (usually comma).</li>
-                                    <li>Verify the data format and click <strong>"Load"</strong>.</li>
-                                </ul>
-                            </li>
-                        </ol>
-                        <p>Your data will now be loaded into the spreadsheet and ready for analysis.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- JavaScript for Modal Toggle -->
-            <script>
-                function openInstructionsModal() {
-                    document.getElementById("instructionsModal").style.display = "block";
-                }
-
-                function closeInstructionsModal() {
-                    document.getElementById("instructionsModal").style.display = "none";
-                }
-
-                // Close the modal when clicking outside the modal content
-                window.onclick = function(event) {
-                    const modal = document.getElementById("instructionsModal");
-                    if (event.target === modal) {
-                        closeInstructionsModal();
-                    }
-                }
-            </script>
-
         </div>
     </div>
 
     <!-- Codebook Block -->
     <div class="col-md-6">
-        <div class="h-100 p-5 text-black rounded-3" style="background-color: #eeeeef; text-align: center;">
+        <div class="h-100 p-3 text-black rounded-3" style="background-color: #eeeeef; text-align: center;">
             <h2>Codebook</h2>
-            <p>Read the codebook below for information on the variables included in the dataset.</p>
+            <p style="margin-bottom: 10px;">Read the codebook below for information on the variables included in the dataset.</p>
 
             <!-- Codebook Button -->
             <a href="https://cbspeeches.com/CBSpeeches_Codebook.pdf" target="_blank">
-                <button class="btn btn-outline-dark" type="button">Codebook</button>
+                <button class="btn btn-outline-dark" type="button" style="padding: 4px 20px;">Codebook</button>
             </a>
         </div>
     </div>
 </div>
+
 
 <!-- How to Cite Section -->
 <div class="mb-4 rounded-3" style="background-color: #eeeeef; margin-top: 2%;">
