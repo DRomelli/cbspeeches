@@ -98,23 +98,36 @@
                 <div style="margin-top: 10px;">
                     <strong>R:</strong>
                     <p>Open R or RStudio and load the file as follows:</p>
-                    <pre style="background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9em; white-space: pre; text-align: left; font-family: monospace;">
-            library(haven)
-            data <- read_dta("CBS_dataset_v1.0.rds")
-                    </pre>
+                    <p>
+                        library(haven)
+                        data <- read_dta("CBS_dataset_v1.0.rds")
+                    </p>
                 </div>
                 
                 <div style="margin-top: 10px;">
                     <strong>Stata:</strong>
                     <p>Open STATA and load the file as follows:</p>
-                    <pre style="background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9em; white-space: pre; text-align: left; font-family: monospace;">
-            use "CBS_dataset_v1.0.dta", clear
-                    </pre>
+                    <p>
+                        use "CBS_dataset_v1.0.dta", clear
+                    </p>
                 </div>
                 
                 <div style="margin-top: 10px;">
                     <strong>CSV:</strong>
-                    <p>Open a blank spreadsheet and import the data by opening the "Data" tab in the ribbon menu and selecting "From Text/CSV". From here, the text file may be selected and loaded in the spreadsheet.</p>
+                    <p>Follow these steps to import the CSV file into Excel:</p>
+                    <ol style="margin-left: 20px; padding-left: 0; color: white;">
+                        <li>Open <strong>Microsoft Excel</strong> and create a <strong>blank spreadsheet</strong>.</li>
+                        <li>Click on the <strong>"Data"</strong> tab in the ribbon menu at the top.</li>
+                        <li>Select <strong>"From Text/CSV"</strong> in the "Get & Transform Data" section.</li>
+                        <li>Browse and select the desired CSV file (e.g., <strong>CBS_dataset_v1.0.csv</strong>).</li>
+                        <li>Click <strong>"Import"</strong> and follow the on-screen prompts:
+                            <ul style="margin-left: 20px;">
+                                <li>Confirm the <strong>delimiter</strong> (usually comma).</li>
+                                <li>Verify the data format and click <strong>"Load"</strong>.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p>Your data will now be loaded into the spreadsheet and ready for analysis.</p>
                 </div>
             </div>
 
