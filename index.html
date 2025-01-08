@@ -88,34 +88,23 @@
                 </a>
             </div>
 
-            <!-- Instructions Toggle Link -->
-            <p style="margin-top: 20px; cursor: pointer; font-size: 1.1em; color: white;" onclick="toggleInstructions()">
-                <span id="chevronSymbol" style="font-size: 1.2em;">#0569b9;</span> View instructions to open the files
-            </p>
-
             <!-- Instructions Content -->
             <div id="instructionsDropdown" style="display: none; color: white; text-align: left;">
                 <div style="margin-top: 10px;">
                     <strong>R:</strong>
                     <p>Open R or RStudio and load the file as follows:</p>
-                    <div style="position: relative; background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px;">
-                        <pre id="rCode" style="margin: 0; white-space: pre-wrap; font-family: monospace; font-size: 1em;">library(haven)
-            data <- read_dta("YOUR/PATH/CBS_dataset_v1.0.rds")</pre>
-                        <button onclick="copyToClipboard('rCode')" style="position: absolute; top: 10px; right: 10px; background-color: #ffffff30; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">
-                            Copy Code
-                        </button>
-                    </div>
+                    <pre style="background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9em; white-space: pre-wrap; font-family: monospace;">
+            library(haven)
+            data <- read_dta("YOUR/PATH/CBS_dataset_v1.0.rds")
+                    </pre>
                 </div>
                 
                 <div style="margin-top: 10px;">
                     <strong>Stata:</strong>
                     <p>Open STATA and load the file as follows:</p>
-                    <div style="position: relative; background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px;">
-                        <pre id="stataCode" style="margin: 0; white-space: pre-wrap; font-family: monospace; font-size: 1em;">use "YOUR/PATH/CBS_dataset_v1.0.dta", clear</pre>
-                        <button onclick="copyToClipboard('stataCode')" style="position: absolute; top: 10px; right: 10px; background-color: #ffffff30; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">
-                            Copy Code
-                        </button>
-                    </div>
+                    <pre style="background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9em; white-space: pre-wrap; font-family: monospace;">
+            use "YOUR/PATH/CBS_dataset_v1.0.dta", clear
+                    </pre>
                 </div>
                 
                 <div style="margin-top: 10px;">
@@ -124,16 +113,30 @@
                 </div>
             </div>
 
-            <!-- JavaScript for Copy Button -->
-            <script>
-                function copyToClipboard(elementId) {
-                    const codeElement = document.getElementById(elementId);
-                    const textToCopy = codeElement.textContent.trim();
+            <!-- Toggle Link -->
+            <p style="margin-top: 20px; cursor: pointer; font-size: 1.1em; color: white;" onmouseover="hoverInstructions(true)" onmouseout="hoverInstructions(false)" onclick="toggleInstructions()">
+                <span id="chevronSymbol" style="font-size: 1.2em;">&#x25B6;</span> View instructions to open the files
+            </p>
 
-                    navigator.clipboard.writeText(textToCopy).then(
-                        () => alert('Code copied to clipboard!'),
-                        () => alert('Failed to copy code.')
-                    );
+            <!-- JavaScript for Toggle and Hover Effect -->
+            <script>
+                function toggleInstructions() {
+                    const instructions = document.getElementById("instructionsDropdown");
+                    const chevronSymbol = document.getElementById("chevronSymbol");
+
+                    if (instructions.style.display === "none") {
+                        instructions.style.display = "block";
+                        chevronSymbol.innerHTML = "&#x25BC;"; // Downward chevron
+                    } else {
+                        instructions.style.display = "none";
+                        chevronSymbol.innerHTML = "&#x25B6;"; // Rightward chevron
+                    }
+                }
+
+                // Function to fix the hover color of the toggle link to match the main box color
+                function hoverInstructions(isHovered) {
+                    const toggleText = event.target;
+                    toggleText.style.color = isHovered ? "#0569b9" : "white";
                 }
             </script>
 
