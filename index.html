@@ -98,7 +98,7 @@
                 <div style="margin-top: 10px;">
                     <strong>R:</strong>
                     <p>Open R or RStudio and load the file as follows:</p>
-                    <pre style="background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9em; white-space: pre-wrap; font-family: monospace;">
+                    <pre style="background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9em; white-space: pre; text-align: left; font-family: monospace;">
             library(haven)
             data <- read_dta("CBS_dataset_v1.0.rds")
                     </pre>
@@ -107,7 +107,7 @@
                 <div style="margin-top: 10px;">
                     <strong>Stata:</strong>
                     <p>Open STATA and load the file as follows:</p>
-                    <pre style="background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9em; white-space: pre-wrap; font-family: monospace;">
+                    <pre style="background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9em; white-space: pre; text-align: left; font-family: monospace;">
             use "CBS_dataset_v1.0.dta", clear
                     </pre>
                 </div>
@@ -118,21 +118,6 @@
                 </div>
             </div>
 
-            <!-- JavaScript for Toggle -->
-            <script>
-                function toggleInstructions() {
-                    const instructions = document.getElementById("instructionsDropdown");
-                    const chevronSymbol = document.getElementById("chevronSymbol");
-
-                    if (instructions.style.display === "none") {
-                        instructions.style.display = "block";
-                        chevronSymbol.innerHTML = "&#x25BC;"; // Downward chevron
-                    } else {
-                        instructions.style.display = "none";
-                        chevronSymbol.innerHTML = "&#x25B6;"; // Rightward chevron
-                    }
-                }
-            </script>
 
         </div>
     </div>
