@@ -7,4 +7,4 @@ The dataset features **35,487 unique speeches from 131 central banks**, for the 
 The dataset is freely available for academic research and personal non-commercial use on the [www.cbspeeches.com](https://www.cbspeeches.com) website.
 
 When you use the dataset, please acknowledge the following paper as the data source:
-- Campiglio, E., Deyris, J., Romelli, D., Scalisi, G., 2025. [Warning words in a warming world: Central bank communication and climate change]().
+- Campiglio, E., Deyris, J., Romelli, D., Scalisi, G., 2025. [Warning words in a warming world: Central bank communication and climate change](https://www.sciencedirect.com/science/article/pii/S0014292125001515), *European Economic Review* [Open access].
