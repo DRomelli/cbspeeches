@@ -8,7 +8,7 @@
 
     <!-- START: Open Graph tags -->
     <meta property="og:title" content="CBS Dataset - Central Bank Speeches" />
-    <meta property="og:description" content="The CBS Dataset features 35,487 unique speeches from 131 central banks for the 1986-2023 period. The CBS dataset is fully available open access." />
+    <meta property="og:description" content="The CBS Dataset features 35,487 unique speeches from 131 central banks for the 1986–2023 period. The CBS dataset is freely available for academic research and personal non-commercial use." />
     <meta property="og:image" content="https://cbspeeches.com/fig/data_by_source_linkedin.jpg" />
     <meta property="og:url" content="https://cbspeeches.com/" />
     <meta property="og:image:width" content="1200" />
@@ -27,7 +27,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-DGCF4RH8PM');
 </script>
     
@@ -49,6 +48,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="https://cbspeeches.shinyapps.io/explorer/" target="_blank" rel="noopener noreferrer" style="color: #0569b9;">Interactive App</a>
                     </li>
+                    <!-- NEW: Replication link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#replication" style="color: #0569b9;">Replication</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -57,371 +60,373 @@
     <!--- Main Section ---> 
     <div class="rounded-3" style="margin-top: 1em; margin-bottom: 0;">
         <div class="container-fluid py-2" style="padding-bottom: 0;">
-            <p class="col-md-14 fs-5">This website contains the dataset of central banker speeches (<b>CBS Dataset</b>) collected for Campiglio, Deyris, Romelli, and Scalisi (<a style="color:#0569b9;" href="https://www.sciencedirect.com/science/article/pii/S0014292125001515" target="_blank" rel="noopener">2025</a>). This dataset has been created by complementing the central bankers' speeches dataset compiled by the <a style="color:#0569b9;" href="https://www.bis.org/cbspeeches/index.htm" target="_blank" rel="noopener">Bank of International Settlement</a> (18,045 speeches) with a systematic scraping of central banks' websites (15,435 new speeches) and archive work (2,007 additional speeches).</p>
-            <p class="col-md-14 fs-5">The dataset features <b>35,487 unique speeches from 131 central banks</b>, for the period going <b>from the beginning of January 1986</b> (date of the first online speech by a central bank) <b>to the end of December 2023</b>. Among those speeches, 5,347 were provided in a non-English language and were translated using Microsoft Translation services.</p>
-            <p class="col-md-14 fs-5" style="margin-bottom: 0;">The dataset is available free of charge for academic research and personal non-commercial use. It can be downloaded in various formats below or explored using an <a style="color:#0569b9;" href="https://cbspeeches.shinyapps.io/explorer/" target="_blank" rel="noopener">interactive app</a>.</p>
-        </div>
-    </div>
-  
-<!-- Data & Doc Section -->
-<div class="row align-items-md-stretch" style="margin-top: 0;">
-    <!-- Data Block -->
-    <div class="col-md-6" style="text-align: center;">
-        <div class="h-100 text-white p-3 rounded-3" style="background-color: #0569b9;">
-            <h2>Data</h2>
-            <p style="margin-bottom: 10px;">Download the latest version of the dataset.</p>
-
-            <div style="display: flex; justify-content: center; margin-bottom: 10px;">
-                <!-- R Button -->
-                <a href="https://www.dropbox.com/scl/fi/3mook5toq696r1fx8nzb6/CBS_dataset_v1.0.rds?rlkey=pe07q0jji1hz1nl9alau9abxr&dl=0" target="_blank">
-                    <button class="btn btn-warning" type="button" style="margin-right: 5px; padding: 4px 20px;">R</button>
-                </a>
-
-                <!-- STATA Button -->
-                <a href="https://www.dropbox.com/scl/fi/la5hpz39yht8mmoz0n98t/CBS_dataset_v1.0.dta?rlkey=jo0u8ktm1ixkwic4jw03re9c6&dl=0" target="_blank">
-                    <button class="btn btn-warning" type="button" style="margin-right: 5px; padding: 4px 20px;">STATA</button>
-                </a>
-
-                <!-- CSV Button -->
-                <a href="https://www.dropbox.com/scl/fi/n2tsmswnk4ymm3zz0wteg/CBS_dataset_v1.0.csv?rlkey=sdxk6b9xpid0xe7w7s4nm6s87&dl=0" target="_blank">
-                    <button class="btn btn-warning" type="button" style="padding: 4px 20px;">CSV</button>
-                </a>
-            </div>
-
-            <!-- Instructions Toggle Link -->
-            <p style="margin-top: 10px; cursor: pointer; font-size: 1.1em; color: white; background-color: #0569b9; padding: 8px; border-radius: 5px; display: inline-block;" onclick="openInstructionsModal()">
-                <span id="chevronSymbol" style="font-size: 1.2em; color: white;">&#x25B6;</span> Instructions to open the files
+            <p class="col-md-14 fs-5">
+                This website contains the dataset of central banker speeches (<b>CBS Dataset</b>) collected for Campiglio, Deyris, Romelli, and Scalisi (<a style="color:#0569b9;" href="https://www.sciencedirect.com/science/article/pii/S0014292125001515" target="_blank" rel="noopener">2025</a>). This dataset has been created by complementing the Central Bankers’ Speeches dataset compiled by the 
+                <a style="color:#0569b9;" href="https://www.bis.org/cbspeeches/index.htm" target="_blank" rel="noopener">Bank for International Settlements</a> (18,045 speeches) with a systematic scraping of central banks' websites (15,435 new speeches) and archive work (2,007 additional speeches).
+            </p>
+            <p class="col-md-14 fs-5">
+                The dataset features <b>35,487 unique speeches from 131 central banks</b>, for the period <b>January 1986</b> (date of the first online speech by a central bank) to <b>December 2023</b>. Among those speeches, 5,347 were provided in a non-English language and were translated using Microsoft Translation services.
+            </p>
+            <p class="col-md-14 fs-5" style="margin-bottom: 0;">
+                The dataset is available free of charge for academic research and personal non-commercial use. It can be downloaded in various formats below or explored using an 
+                <a style="color:#0569b9;" href="https://cbspeeches.shinyapps.io/explorer/" target="_blank" rel="noopener">interactive app</a>.
             </p>
         </div>
     </div>
+  
+    <!-- Data & Doc Section -->
+    <div class="row align-items-md-stretch" style="margin-top: 0;">
+        <!-- Data Block -->
+        <div class="col-md-6" style="text-align: center;">
+            <div class="h-100 text-white p-3 rounded-3" style="background-color: #0569b9;">
+                <h2>Data</h2>
+                <p style="margin-bottom: 10px;">Download the latest version of the dataset.</p>
 
-    <!-- Codebook Block -->
-    <div class="col-md-6">
-        <div class="h-100 p-3 text-black rounded-3" style="background-color: #eeeeef; text-align: center;">
-            <h2>Codebook</h2>
-            <p style="margin-bottom: 10px;">Read the codebook below for information on the variables included in the dataset.</p>
+                <div style="display: flex; justify-content: center; margin-bottom: 10px;">
+                    <!-- R Button -->
+                    <a href="https://www.dropbox.com/scl/fi/3mook5toq696r1fx8nzb6/CBS_dataset_v1.0.rds?rlkey=pe07q0jji1hz1nl9alau9abxr&dl=0" target="_blank" rel="noopener noreferrer">
+                        <button class="btn btn-warning" type="button" style="margin-right: 5px; padding: 4px 20px;">R</button>
+                    </a>
 
-            <!-- Codebook Button -->
-            <a href="https://cbspeeches.com/CBSpeeches_Codebook.pdf" target="_blank">
-                <button class="btn btn-outline-dark" type="button" style="padding: 4px 20px;">Codebook</button>
-            </a>
-        </div>
-    </div>
-</div>
+                    <!-- STATA Button -->
+                    <a href="https://www.dropbox.com/scl/fi/la5hpz39yht8mmoz0n98t/CBS_dataset_v1.0.dta?rlkey=jo0u8ktm1ixkwic4jw03re9c6&dl=0" target="_blank" rel="noopener noreferrer">
+                        <button class="btn btn-warning" type="button" style="margin-right: 5px; padding: 4px 20px;">STATA</button>
+                    </a>
 
-<!-- Instructions Modal (Pop-Out) -->
-<div id="instructionsModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); overflow: auto;">
-    <div style="background-color: #0569b9; color: white; padding: 20px; margin: 5% auto; border-radius: 10px; width: 80%; max-width: 600px;">
-        <span onclick="closeInstructionsModal()" style="float: right; font-size: 24px; font-weight: bold; cursor: pointer;">&times;</span>
-        <h3 style="text-align: center;">Instructions to open the files</h3>
-        <div style="margin-top: 20px;">
-            <!-- R Instructions -->
-            <strong>R:</strong>
-            <p style="text-align: left;">Open R or RStudio and load the file as follows:</p>
-            <pre style="background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9em; font-family: monospace;">library(haven)
-data <- read_dta("CBS_dataset_v1.0.rds")</pre>
-
-            <!-- Divider Line -->
-            <hr style="border: 1px solid rgba(255, 255, 255, 0.5); margin: 20px 0;">
-
-            <!-- Stata Instructions -->
-            <strong>Stata:</strong>
-            <p style="text-align: left;">Open Stata and load the file as follows:</p>
-            <pre style="background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9em; font-family: monospace;">use "CBS_dataset_v1.0.dta", clear</pre>
-
-            <!-- Divider Line -->
-            <hr style="border: 1px solid rgba(255, 255, 255, 0.5); margin: 20px 0;">
-
-            <!-- CSV Instructions -->
-            <strong>CSV:</strong>
-            <p style="text-align: left;">Follow these steps to import the CSV file into Excel:</p>
-            <ol style="margin-left: 20px; padding-left: 0;">
-                <li>Open <strong>Microsoft Excel</strong> and create a <strong>blank spreadsheet</strong>.</li>
-                <li>Click on the <strong>"Data"</strong> tab in the ribbon menu at the top.</li>
-                <li>Select <strong>"From Text/CSV"</strong> in the "Get & Transform Data" section.</li>
-                <li>Browse and select the desired CSV file (e.g., <strong>CBS_dataset_v1.0.csv</strong>).</li>
-                <li>Click <strong>"Import"</strong> and follow the on-screen prompts:
-                    <ul style="margin-left: 20px;">
-                        <li>Confirm the <strong>delimiter</strong> (usually comma).</li>
-                        <li>Verify the data format and click <strong>"Load"</strong>.</li>
-                    </ul>
-                </li>
-            </ol>
-            <p>Your data will now be loaded into the spreadsheet and ready for analysis.</p>
-        </div>
-    </div>
-</div>
-
-<!-- JavaScript for Modal Toggle -->
-<script>
-    function openInstructionsModal() {
-        document.getElementById("instructionsModal").style.display = "block";
-    }
-
-    function closeInstructionsModal() {
-        document.getElementById("instructionsModal").style.display = "none";
-    }
-
-    // Close the modal when clicking outside the modal content
-    window.onclick = function(event) {
-        const modal = document.getElementById("instructionsModal");
-        if (event.target === modal) {
-            closeInstructionsModal();
-        }
-    }
-</script>
-
-<!-- How to Cite Section -->
-<div class="mb-4 rounded-3" style="background-color: #eeeeef; margin-top: 2%;">
-    <div class="container-fluid py-3">
-        <!-- Citation Header with BibTeX Button -->
-        <div class="d-flex justify-content-between align-items-center">
-            <h2 class="mb-0">Citation</h2>
-            <button onclick="openModal()" class="btn btn-primary">BibTeX</button>
-        </div>
-
-        <p class="fs-5 mt-3">When using this data, please cite:</p>
-
-        <div style="padding: 0 50px;">
-            <ul class="fs-5" style="list-style-type: disc;">
-                <li>
-                    Campiglio, E., Deyris, J., Romelli, D. and Scalisi, G., 2025. 
-                    <a href="https://www.sciencedirect.com/science/article/pii/S0014292125001515" target="_blank" rel="noopener" style="color:#0569b9; text-decoration: underline; font-style: italic; font-weight: bold;">
-                        Warning words in a warming world: Central bank communication and climate change.
-                    </a> 
-                    <em>European Economic Review [Open Access], Vol 178.</em>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<!-- JavaScript for Modal -->
-<script>
-    function openModal() {
-        alert("BibTeX reference will be shown here."); // Placeholder for your modal logic
-    }
-</script>
-
-<!-- Modal for BibTeX citation -->
-<div id="bibtexModal" class="modal" style="display: none;">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h4 style="text-align: center;">BibTeX Citation</h4>
-        <pre id="bibtexContent" style="white-space: pre-wrap; font-family: monospace; background-color: #f7f7f7; padding: 15px; border-radius: 5px;">
-@article{Campiglio_Deyris_Romelli_Scalisi_2025,
-title = {Warning words in a warming world: Central bank communication and climate change},
-journal = {European Economic Review},
-volume = {178},
-pages = {105101},
-year = {2025},
-issn = {0014-2921},
-doi = {https://doi.org/10.1016/j.euroecorev.2025.105101},
-url = {https://www.sciencedirect.com/science/article/pii/S0014292125001515},
-author={Campiglio, Emanuele and Deyris, Jérôme and Romelli, Davide and Scalisi, Ginevra}
-}
-            
-        </pre>
-
-        <!-- Copy and Download Buttons -->
-        <div style="text-align: center; margin-top: 10px;">
-            <button class="btn btn-secondary" onclick="copyToClipboard()">Copy</button>
-            <button class="btn btn-secondary" onclick="downloadBibTeX()">Download</button>
-        </div>
-    </div>
-</div>
-
-<!-- CSS for modal -->
-<style>
-    .modal {
-        position: fixed;
-        z-index: 9999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.4);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .modal-content {
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        width: 90%;
-        max-width: 600px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .close {
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: red;
-    }
-
-    .btn {
-        margin: 5px;
-    }
-</style>
-
-<!-- JavaScript for modal and buttons -->
-<script>
-    function openModal() {
-        document.getElementById('bibtexModal').style.display = 'flex';
-    }
-
-    function closeModal() {
-        document.getElementById('bibtexModal').style.display = 'none';
-    }
-
-    // Close modal when clicking outside of it
-    window.onclick = function(event) {
-        var modal = document.getElementById('bibtexModal');
-        if (event.target === modal) {
-            closeModal();
-        }
-    };
-
-    // Copy BibTeX content to clipboard
-    function copyToClipboard() {
-        var bibtexContent = document.getElementById('bibtexContent').textContent.trim();
-        navigator.clipboard.writeText(bibtexContent).then(function () {
-            alert('BibTeX citation copied to clipboard!');
-        }, function () {
-            alert('Failed to copy citation.');
-        });
-    }
-
-    // Download BibTeX content as a .bib file
-    function downloadBibTeX() {
-        var bibtexContent = document.getElementById('bibtexContent').textContent.trim();
-        var blob = new Blob([bibtexContent], { type: 'text/plain;charset=utf-8' });
-        var link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = 'campiglio2025warning.bib';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
-</script>
-
-
-      <!--Info Section-->
-<div style="padding: 5% 0; ">
-    <h2 class="col-md-4" style="border-bottom: solid 3px #0569b9; padding-bottom: 0.5em; margin-bottom: 1em;">Contact</h2>
-
-<div class="contact-container">
-    
-    <!-- Emanuele Campiglio -->
-    <div class="contact-box">
-        <div style="width: 250px;">
-            <img src="https://www.eiee.org/wp-content/uploads/2021/07/Campiglio-pic.png" alt    ="emanuele_picture" style="width: 250px; border-radius: 0.5rem 0.5rem 0 0;">
-            <div style="background-color: #eeeeef; text-align: center; padding: 20px 0 20px 0    ; border-radius: 0 0 0.5rem 0.5rem;">
-                <a href="https://sites.google.com/site/ecampiglio/" target="_blank" style=" text-decoration: none;">
-                    <h5 style="color: #0569b9; line-height: 0.8;"><b>Emanuele Campiglio</b> </h5>
-                </a>
-                <p>University of Bologna</p>
-                <a style="text-decoration: none; margin-left: 10px; margin-bottom: 30px; color    : #0569b9;" href="mailto:emanuele.campiglio@unibo.it">  emanuele.campiglio@unibo.it</a>
-                
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Jérôme Deyris -->
-    <div class="contact-box">
-        <div style="width: 250px;">
-            <img src="https://economix.fr/uploads/source/photos/Jerome-Deyris-500.png?1.0"  alt="jeromedeyris" style="width: 250px; border-radius: 0.5rem 0.5rem 0 0;">
-            <div style="background-color: #eeeeef; text-align: center; padding: 20px 0 20px 0    ; border-radius: 0 0 0.5rem 0.5rem;">
-                <a href="https://www.jeromedeyris.fr/" target="_blank" style="  text-decoration: none;">
-                    <h5 style="color: #0569b9; line-height: 0.8;"><b>Jérôme Deyris</b></h5>
-                </a>
-                <p>Sciences Po</p>
-                <a style="text-decoration: none; margin-left: 10px; margin-bottom: 3px; color    : #0569b9;" href="mailto:jerome.deyris@sciencespo.fr">  jerome.deyris@sciencespo.fr</a>
-           
-            </div>
-        </div>
-    </div>
-
-    
-    <!-- Davide Romelli -->
-    <div class="contact-box">
-        <div style="width: 250px;">
-            <img src="https://github.com/DRomelli/cbspeeches/blob/main/fig/DRomelli4.jpg?raw=true" alt="davideromelli" style="width: 250px;     border-radius: 0.5rem 0.5rem 0 0;">
-            <div style="background-color: #eeeeef; text-align: center; padding: 20px 0 20px 0    ; border-radius: 0 0 0.5rem 0.5rem;">
-                <a href="https://davideromelli.com/" target="_blank" style="text-decoration:     none;">
-                    <h5 style="color: #0569b9; line-height: 0.8;"><b>Davide Romelli</b></h5>
-                </a>
-                <p>Trinity College Dublin</p>
-                <a style="text-decoration: none; margin-left: 10px; margin-bottom: 3px; color    : #0569b9;" href="mailto:romellid@tcd.ie">romellid@tcd.ie</a>
-            
-            </div>
-        </div>
-    </div>
-
-    <!-- Ginevra Scalisi -->
-    <div class="contact-box">
-        <div style="width: 250px;">
-            <img src="https://www.santannapisa.it/sites/default/files/styles/person_thumb/public/2024-03/immagine%20CV.jpg" alt="scalisi_picture" style="width: 250px; border-radius: 0.5rem 0.5rem 0 0;">
-            <div style="background-color: #eeeeef; text-align: center; padding: 20px 0 20px 0    ; border-radius: 0 0 0.5rem 0.5rem;">
-                <a href="https://www.santannapisa.it/it/ginevra-scalisi" target="_blank"    style="text-decoration: none;">
-                    <h5 style="color: #0569b9; line-height: 0.8;"><b>Ginevra Scalisi</b></h5>
-                </a>
-                <p>Sant'Anna Pisa</p>
-                <a style="text-decoration: none; margin-left: 10px; margin-bottom: 3px; color    : #0569b9;" href="mailto:ginevra.scalisi@santannapisa.it">ginevra.scalisi@santannapisa.it</a>
-            
-         </div>
-         </div>
-    </div>
- </div>
-
-    
-
-        
-
-      <!--- Footer ---> 
-        <div class="container">
-            <footer class="py-3 my-4 border-top">
-                <div class="row">
-                    <div class="col text-center">
-                        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-                        </a>
-                        <p class="text-muted">Data and website © Emanuele Campiglio, Jérôme Deyris, Davide Romelli and Ginevra Scalisi. </p>
-                        <p class="text-muted">The code and data are freely available for academic research and personal non-commercial use. Any other use, including redistribution, requires prior consent under copyright protection.</p>
-                        <p class="text-muted">The research leading to these results has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 Research and Innovation Programme (Grant agreement No 853050 - SMOOTH) and from the 2022 Trinity College Dublin Arts and Social Sciences Benefactions Fund.</p>
-                        <p class="text-muted">We thank Matteo Carrai, Edi Maria Faraglia, Benedetta Gilardi, Riccardo Monforte, Vittoria Piccapietra, Emanuele Pizzochera, India Riordan, Jack Semke, Lorenzo Surian, Simone Trambaiolo and Jiaying Zhu for short-term research assistance.</p>
-                    </div>
+                    <!-- CSV Button -->
+                    <a href="https://www.dropbox.com/scl/fi/n2tsmswnk4ymm3zz0wteg/CBS_dataset_v1.0.csv?rlkey=sdxk6b9xpid0xe7w7s4nm6s87&dl=0" target="_blank" rel="noopener noreferrer">
+                        <button class="btn btn-warning" type="button" style="padding: 4px 20px;">CSV</button>
+                    </a>
                 </div>
-                <div class="row">
-                    <div class="col d-flex justify-content-center">
-                        <ul class="list-unstyled d-flex">
-                            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-                            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-                            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+
+                <!-- Instructions Toggle Link -->
+                <p style="margin-top: 10px; cursor: pointer; font-size: 1.1em; color: white; background-color: #0569b9; padding: 8px; border-radius: 5px; display: inline-block;" onclick="openInstructionsModal()">
+                    <span id="chevronSymbol" style="font-size: 1.2em; color: white;">&#x25B6;</span> Instructions to open the files
+                </p>
+            </div>
+        </div>
+
+        <!-- Codebook Block -->
+        <div class="col-md-6">
+            <div class="h-100 p-3 text-black rounded-3" style="background-color: #eeeeef; text-align: center;">
+                <h2>Codebook</h2>
+                <p style="margin-bottom: 10px;">Read the codebook below for information on the variables included in the dataset.</p>
+
+                <!-- Codebook Button -->
+                <a href="https://cbspeeches.com/CBSpeeches_Codebook.pdf" target="_blank" rel="noopener noreferrer">
+                    <button class="btn btn-outline-dark" type="button" style="padding: 4px 20px;">Codebook</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Replication Package Section -->
+    <div id="replication" class="row align-items-md-stretch" style="margin-top: 1rem;">
+        <div class="col-md-12">
+            <div class="h-100 p-3 text-black rounded-3" style="background-color: #eeeeef; text-align: center;">
+                <h2>Replication Package</h2>
+                <p style="margin-bottom: 10px;">
+                    Reproduce the analyses in Campiglio, Deyris, Romelli, and Scalisi (2025). The ZIP contains code, instructions, and supporting files.
+                </p>
+
+                <div class="d-flex justify-content-center flex-wrap" style="gap: 10px;">
+                    <!-- Download (forces download) -->
+                    <a href="https://www.dropbox.com/scl/fi/mtyhmcqwtaq1im5gou48l/CDRS_EER_Replication.zip?rlkey=i7f99k12b9z1q0gl1bfvxp7cz&dl=1"
+                       target="_blank" rel="noopener noreferrer">
+                        <button class="btn btn-outline-dark" type="button" style="padding: 4px 20px;">Download ZIP</button>
+                    </a>
+
+                    <!-- View on Dropbox (opens preview) -->
+                    <a href="https://www.dropbox.com/scl/fi/mtyhmcqwtaq1im5gou48l/CDRS_EER_Replication.zip?rlkey=i7f99k12b9z1q0gl1bfvxp7cz&dl=0"
+                       target="_blank" rel="noopener noreferrer">
+                        <button class="btn btn-outline-dark" type="button" style="padding: 4px 20px;">View on Dropbox</button>
+                    </a>
+                </div>
+
+                <p class="mt-2" style="margin-bottom: 0;"><small>If you use the package, please cite the paper listed below in “Citation”.</small></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Instructions Modal (Pop-Out) -->
+    <div id="instructionsModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); overflow: auto;">
+        <div style="background-color: #0569b9; color: white; padding: 20px; margin: 5% auto; border-radius: 10px; width: 80%; max-width: 600px;">
+            <span onclick="closeInstructionsModal()" style="float: right; font-size: 24px; font-weight: bold; cursor: pointer;">&times;</span>
+            <h3 style="text-align: center;">Instructions to open the files</h3>
+            <div style="margin-top: 20px;">
+                <!-- R Instructions (FIXED for .rds) -->
+                <strong>R (.rds):</strong>
+                <p style="text-align: left;">Open R or RStudio and load the file as follows:</p>
+                <pre style="background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9em; font-family: monospace;">data <- readRDS("CBS_dataset_v1.0.rds")</pre>
+
+                <!-- Divider Line -->
+                <hr style="border: 1px solid rgba(255, 255, 255, 0.5); margin: 20px 0;">
+
+                <!-- Stata Instructions -->
+                <strong>Stata (.dta):</strong>
+                <p style="text-align: left;">Open Stata and load the file as follows:</p>
+                <pre style="background-color: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9em; font-family: monospace;">use "CBS_dataset_v1.0.dta", clear</pre>
+
+                <!-- Divider Line -->
+                <hr style="border: 1px solid rgba(255, 255, 255, 0.5); margin: 20px 0;">
+
+                <!-- CSV Instructions -->
+                <strong>CSV:</strong>
+                <p style="text-align: left;">Follow these steps to import the CSV file into Excel:</p>
+                <ol style="margin-left: 20px; padding-left: 0;">
+                    <li>Open <strong>Microsoft Excel</strong> and create a <strong>blank spreadsheet</strong>.</li>
+                    <li>Click on the <strong>"Data"</strong> tab in the ribbon menu at the top.</li>
+                    <li>Select <strong>"From Text/CSV"</strong> in the "Get & Transform Data" section.</li>
+                    <li>Browse and select the desired CSV file (e.g., <strong>CBS_dataset_v1.0.csv</strong>).</li>
+                    <li>Click <strong>"Import"</strong> and follow the on-screen prompts:
+                        <ul style="margin-left: 20px;">
+                            <li>Confirm the <strong>delimiter</strong> (usually comma).</li>
+                            <li>Verify the data format and click <strong>"Load"</strong>.</li>
                         </ul>
+                    </li>
+                </ol>
+                <p>Your data will now be loaded into the spreadsheet and ready for analysis.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Cite Section -->
+    <div class="mb-4 rounded-3" style="background-color: #eeeeef; margin-top: 2%;">
+        <div class="container-fluid py-3">
+            <!-- Citation Header with BibTeX Button -->
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 class="mb-0">Citation</h2>
+                <button onclick="openBibtexModal()" class="btn btn-primary">BibTeX</button>
+            </div>
+
+            <p class="fs-5 mt-3">When using this data, please cite:</p>
+
+            <div style="padding: 0 50px;">
+                <ul class="fs-5" style="list-style-type: disc;">
+                    <li>
+                        Campiglio, E., Deyris, J., Romelli, D. and Scalisi, G., 2025. 
+                        <a href="https://www.sciencedirect.com/science/article/pii/S0014292125001515" target="_blank" rel="noopener" style="color:#0569b9; text-decoration: underline; font-style: italic; font-weight: bold;">
+                            Warning words in a warming world: Central bank communication and climate change.
+                        </a> 
+                        <em>European Economic Review [Open Access], Vol 178.</em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for BibTeX citation -->
+    <div id="bibtexModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeBibtexModal()">&times;</span>
+            <h4 style="text-align: center;">BibTeX Citation</h4>
+            <pre id="bibtexContent" style="white-space: pre-wrap; font-family: monospace; background-color: #f7f7f7; padding: 15px; border-radius: 5px;">
+@article{Campiglio_Deyris_Romelli_Scalisi_2025,
+  title   = {Warning words in a warming world: Central bank communication and climate change},
+  journal = {European Economic Review},
+  volume  = {178},
+  pages   = {105101},
+  year    = {2025},
+  issn    = {0014-2921},
+  doi     = {https://doi.org/10.1016/j.euroecorev.2025.105101},
+  url     = {https://www.sciencedirect.com/science/article/pii/S0014292125001515},
+  author  = {Campiglio, Emanuele and Deyris, Jérôme and Romelli, Davide and Scalisi, Ginevra}
+}
+            </pre>
+
+            <!-- Copy and Download Buttons -->
+            <div style="text-align: center; margin-top: 10px;">
+                <button class="btn btn-secondary" onclick="copyToClipboard()">Copy</button>
+                <button class="btn btn-secondary" onclick="downloadBibTeX()">Download</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CSS for modal -->
+    <style>
+        .modal {
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .close {
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+        }
+
+        .btn {
+            margin: 5px;
+        }
+    </style>
+
+    <!-- JavaScript for modals and buttons -->
+    <script>
+        // Instructions modal
+        function openInstructionsModal() {
+            document.getElementById("instructionsModal").style.display = "block";
+        }
+        function closeInstructionsModal() {
+            document.getElementById("instructionsModal").style.display = "none";
+        }
+        document.addEventListener('click', function (event) {
+            const modal = document.getElementById("instructionsModal");
+            if (event.target === modal) closeInstructionsModal();
+        });
+
+        // BibTeX modal
+        function openBibtexModal() {
+            document.getElementById('bibtexModal').style.display = 'flex';
+        }
+        function closeBibtexModal() {
+            document.getElementById('bibtexModal').style.display = 'none';
+        }
+        document.addEventListener('click', function (event) {
+            const modal = document.getElementById('bibtexModal');
+            if (event.target === modal) closeBibtexModal();
+        });
+
+        // Copy BibTeX content to clipboard
+        function copyToClipboard() {
+            var bibtexContent = document.getElementById('bibtexContent').textContent.trim();
+            navigator.clipboard.writeText(bibtexContent).then(function () {
+                alert('BibTeX citation copied to clipboard!');
+            }, function () {
+                alert('Failed to copy citation.');
+            });
+        }
+
+        // Download BibTeX content as a .bib file
+        function downloadBibTeX() {
+            var bibtexContent = document.getElementById('bibtexContent').textContent.trim();
+            var blob = new Blob([bibtexContent], { type: 'text/plain;charset=utf-8' });
+            var link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'campiglio2025warning.bib';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+
+    <!--Info Section-->
+    <div style="padding: 5% 0;">
+        <h2 class="col-md-4" style="border-bottom: solid 3px #0569b9; padding-bottom: 0.5em; margin-bottom: 1em;">Contact</h2>
+
+        <div class="contact-container">
+            
+            <!-- Emanuele Campiglio -->
+            <div class="contact-box">
+                <div style="width: 250px;">
+                    <img src="https://www.eiee.org/wp-content/uploads/2021/07/Campiglio-pic.png" alt="emanuele_picture" style="width: 250px; border-radius: 0.5rem 0.5rem 0 0;">
+                    <div style="background-color: #eeeeef; text-align: center; padding: 20px 0 20px 0; border-radius: 0 0 0.5rem 0.5rem;">
+                        <a href="https://sites.google.com/site/ecampiglio/" target="_blank" style="text-decoration: none;">
+                            <h5 style="color: #0569b9; line-height: 0.8;"><b>Emanuele Campiglio</b></h5>
+                        </a>
+                        <p>University of Bologna</p>
+                        <a style="text-decoration: none; margin-left: 10px; margin-bottom: 30px; color: #0569b9;" href="mailto:emanuele.campiglio@unibo.it">emanuele.campiglio@unibo.it</a>
                     </div>
                 </div>
-            </footer>
+            </div>
+
+            <!-- Jérôme Deyris -->
+            <div class="contact-box">
+                <div style="width: 250px;">
+                    <img src="https://economix.fr/uploads/source/photos/Jerome-Deyris-500.png?1.0" alt="jeromedeyris" style="width: 250px; border-radius: 0.5rem 0.5rem 0 0;">
+                    <div style="background-color: #eeeeef; text-align: center; padding: 20px 0 20px 0; border-radius: 0 0 0.5rem 0.5rem;">
+                        <a href="https://www.jeromedeyris.fr/" target="_blank" style="text-decoration: none;">
+                            <h5 style="color: #0569b9; line-height: 0.8;"><b>Jérôme Deyris</b></h5>
+                        </a>
+                        <p>Sciences Po</p>
+                        <a style="text-decoration: none; margin-left: 10px; margin-bottom: 3px; color: #0569b9;" href="mailto:jerome.deyris@sciencespo.fr">jerome.deyris@sciencespo.fr</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Davide Romelli -->
+            <div class="contact-box">
+                <div style="width: 250px;">
+                    <img src="https://github.com/DRomelli/cbspeeches/blob/main/fig/DRomelli4.jpg?raw=true" alt="davideromelli" style="width: 250px; border-radius: 0.5rem 0.5rem 0 0;">
+                    <div style="background-color: #eeeeef; text-align: center; padding: 20px 0 20px 0; border-radius: 0 0 0.5rem 0.5rem;">
+                        <a href="https://davideromelli.com/" target="_blank" style="text-decoration: none;">
+                            <h5 style="color: #0569b9; line-height: 0.8;"><b>Davide Romelli</b></h5>
+                        </a>
+                        <p>Trinity College Dublin</p>
+                        <a style="text-decoration: none; margin-left: 10px; margin-bottom: 3px; color: #0569b9;" href="mailto:romellid@tcd.ie">romellid@tcd.ie</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ginevra Scalisi -->
+            <div class="contact-box">
+                <div style="width: 250px;">
+                    <img src="https://www.santannapisa.it/sites/default/files/styles/person_thumb/public/2024-03/immagine%20CV.jpg" alt="scalisi_picture" style="width: 250px; border-radius: 0.5rem 0.5rem 0 0;">
+                    <div style="background-color: #eeeeef; text-align: center; padding: 20px 0 20px 0; border-radius: 0 0 0.5rem 0.5rem;">
+                        <a href="https://www.santannapisa.it/it/ginevra-scalisi" target="_blank" style="text-decoration: none;">
+                            <h5 style="color: #0569b9; line-height: 0.8;"><b>Ginevra Scalisi</b></h5>
+                        </a>
+                        <p>Sant'Anna Pisa</p>
+                        <a style="text-decoration: none; margin-left: 10px; margin-bottom: 3px; color: #0569b9;" href="mailto:ginevra.scalisi@santannapisa.it">ginevra.scalisi@santannapisa.it</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
+    <!--- Footer ---> 
+    <div class="container">
+        <footer class="py-3 my-4 border-top">
+            <div class="row">
+                <div class="col text-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                    <p class="text-muted">Data and website © Emanuele Campiglio, Jérôme Deyris, Davide Romelli and Ginevra Scalisi. </p>
+                    <p class="text-muted">The code and data are freely available for academic research and personal non-commercial use. Any other use, including redistribution, requires prior consent under copyright protection.</p>
+                    <p class="text-muted">The research leading to these results has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 Research and Innovation Programme (Grant agreement No 853050 - SMOOTH) and from the 2022 Trinity College Dublin Arts and Social Sciences Benefactions Fund.</p>
+                    <p class="text-muted">We thank Matteo Carrai, Edi Maria Faraglia, Benedetta Gilardi, Riccardo Monforte, Vittoria Piccapietra, Emanuele Pizzochera, India Riordan, Jack Semke, Lorenzo Surian, Simone Trambaiolo and Jiaying Zhu for short-term research assistance.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
 
-<!--- Scripts ---> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/bootstrap-table@1.20.2/dist/bootstrap-table.min.js"></script>
+    <!--- Scripts ---> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Removed duplicate Bootstrap alpha JS to avoid conflicts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.20.2/dist/bootstrap-table.min.js"></script>
 </body>
 </html>
-
-
-
